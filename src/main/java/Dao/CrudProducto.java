@@ -2,6 +2,7 @@ package Dao;
 
 import java.util.List;
 
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -11,7 +12,6 @@ import model.TblProductocl2;
 
 public class CrudProducto implements IProducto {
 
-	@Override
 	public void RegistrarProducto(TblProductocl2 tblpro) {
 		//Establecemos la conexion con  la unidad de persistencia...
 		EntityManagerFactory conex=Persistence.createEntityManagerFactory("LPII_CL2_CUEVAMONTALBAN");		
@@ -31,22 +31,22 @@ public class CrudProducto implements IProducto {
 		
 	}
 
-	@Override
+
 	public void ActualizarProducto(TblProductocl2 tblpro) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+
 	public void EliminarProducto(TblProductocl2 tblpro) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public List<TblProductocl2> ListadoProducto() {
 		 //Establecemos la conexion con  la unidad de persistencia...
-		EntityManagerFactory conex=Persistence.createEntityManagerFactory("LPII_CL1_CUEVAMONTALBAN");
+		EntityManagerFactory conex=Persistence.createEntityManagerFactory("LPII_CL2_CUEVAMONTALBAN");
 		//Gestionar entidades como registrar, actulizar , eliminar, etc...
 		EntityManager emanager=conex.createEntityManager();
 		//Iniciamos la transaccion...
@@ -62,7 +62,7 @@ public class CrudProducto implements IProducto {
         return listado;
 	}
 
-	@Override
+
 	public TblProductocl2 BuscarProductoCodigo(TblProductocl2 tblpro) {
 		// TODO Auto-generated method stub
 		return null;
